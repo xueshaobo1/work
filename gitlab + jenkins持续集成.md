@@ -66,16 +66,23 @@ git push origin master #上传到gitlab服务器
 git init #初始化本地仓库
 git pull #拉去远程分支 
 
+git branch #查看分支
 git branch name #创建那么分支
 git checkout -b name #创建name分支并切换
 git merge name #合并分支
 git branch -d name #删除分支
 
+git tag tag_name #将现在的代码打包为tag
+git tag #查看tag
+git push origin tag_name #推送最新的tag
+git describe --tags `git rev-list --tags --max-count=1` #获取最新的tag
 ```
 
 ### gitlab权限问题
 
-![2018-11-29_110047](C:\Users\Admin\Desktop\2018-11-29_110047.png)
+![2018-11-29_110047](C:\Users\Admin\Desktop\2018-11-29_110047.png) 
+
+
 
 ## jenkins安装配置
 
@@ -109,6 +116,15 @@ systemctl start jenkins
 
 - 常用插件介绍
 
-1. ssh
-2. git plugin
+1. Gitlab Hook
+2. Build Authorization Token Root
+3. Publish Over SSH
+4. Gitlab Authentication
+5. Gitlab
+6. Git Parameter #git参数化构建
+7. build-name-setter #项目名称构建
+8. user build vars plugin #获取运行job的用户
 
+![2018-11-30_135426](C:\Users\Admin\Desktop\2018-11-30_135426.png)
+
+ 
